@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 //NEEDS TO MOVE MORE SMOOTHLY, AND MOVE FATHER WITH A SINGLE INPUT!!
 //Make middle step: IMPLUSEES!!!!! (USE A DICTIONARY ENUMERATE THE IMPLUES!!!)
 //FIX ME: FIX THE TEXT FOR THE WIN CONDITION!!!! THEN SHARE THE GAME AROUND!!!
@@ -12,7 +13,6 @@ using UnityEngine.UI;
     /// Show what moves are queued up
     /// </summary>
 public class Player_Control_Test : MonoBehaviour {
-
     public static float speed = 1;             //Floating point variable to store the player's movement speed.
     public float step;
     float Offset = 2.5f;
@@ -34,6 +34,7 @@ public class Player_Control_Test : MonoBehaviour {
     //Text set up
     public Text winText;
     public GameObject bulletPrefab;
+	public GameObject inText;
 
     // Use this for initialization
     void Start()
@@ -44,6 +45,8 @@ public class Player_Control_Test : MonoBehaviour {
         rb2d = GetComponent<Rigidbody2D>();
         inputList = new moveStates[6];
         winText.text = "TEST TEST TEST";
+		inText.GetComponent<Text>().text
+		= "" ;
         aim_sprite = gameObject.transform.GetChild(0).gameObject;
         angle = 0;
    
@@ -56,48 +59,57 @@ public class Player_Control_Test : MonoBehaviour {
         if (Input.GetKeyDown(Inputs[0]))
         {
             print("Stored input '" +Inputs[0]+"' ");
+			inText.GetComponent<Text>().text += Inputs[0];
             inputList[indexSlot] = moveStates.LEFT;
             indexSlot += 1;
         }
         if (Input.GetKeyDown(Inputs[1]))
         {
             print("Stored input '" + Inputs[1] + "' ");
+			inText.GetComponent<Text>().text += Inputs[1];
             inputList[indexSlot] = moveStates.RIGHT;
             indexSlot += 1;
         }
         if (Input.GetKeyDown(Inputs[2]))
         {
             print("Stored input '" + Inputs[2] + "' ");
+			inText.GetComponent<Text>().text += Inputs[2];
             inputList[indexSlot] = moveStates.UP;
             indexSlot += 1;
         }
         if (Input.GetKeyDown(Inputs[3]))
         {
             print("Stored input '" + Inputs[3] + "' ");
+			inText.GetComponent<Text>().text += Inputs[3];
             inputList[indexSlot] = moveStates.DOWN;
             indexSlot += 1;
         }
         if (Input.GetKeyDown(Inputs[5]))
         {
             print("Stored input '" + Inputs[5] + "' ");
+			inText.GetComponent<Text>().text += Inputs[5];
             inputList[indexSlot] = moveStates.ROTATE_LEFT;
             indexSlot += 1;
         }
         if (Input.GetKeyDown(Inputs[6]))
         {
             print("Stored input '" + Inputs[6] + "' ");
+			inText.GetComponent<Text>().text += Inputs[6];
             inputList[indexSlot] = moveStates.ROTATE_RIGHT;
             indexSlot += 1;
         }
         if (Input.GetKeyDown(Inputs[7]))
         {
             print("Stored input '" + Inputs[7] + "' ");
+			inText.GetComponent<Text>().text += Inputs[7];
             inputList[indexSlot] = moveStates.SHOOT;
             indexSlot += 1;
         }
         if (indexSlot >= inputList.Length)
         {
+			inText.GetComponent<Text>().text = "";
             indexSlot = 0;
+			Array.Clear(inputList, 0, inputList.Length);
         }
     }
     //MAKING NEW METHOD FOR MOVEMENT! TOGGLES ON MOVE UNTIL REACHING POSTION
@@ -182,7 +194,8 @@ public class Player_Control_Test : MonoBehaviour {
         
         if (Input.GetKeyDown(Inputs[4]))
         {
-            submit = true;
+			submit = true;
+			print (inText.GetComponent<Text> ().text);
             
         }
         if (submit)
@@ -205,6 +218,9 @@ public class Player_Control_Test : MonoBehaviour {
                 currentAction = 0;
                 inputList = new moveStates[6];
                 submit = false;
+				inText.GetComponent<Text>().text = "";
+				indexSlot = 0;
+				Array.Clear(inputList, 0, inputList.Length);
 
             }
         }
