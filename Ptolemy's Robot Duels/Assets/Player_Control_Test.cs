@@ -45,8 +45,7 @@ public class Player_Control_Test : MonoBehaviour {
         rb2d = GetComponent<Rigidbody2D>();
         inputList = new moveStates[6];
         winText.text = "TEST TEST TEST";
-		inText.GetComponent<Text>().text
-		= "" ;
+		inText.GetComponent<TextMesh>().text = "" ;
         aim_sprite = gameObject.transform.GetChild(0).gameObject;
         angle = 0;
    
@@ -59,55 +58,55 @@ public class Player_Control_Test : MonoBehaviour {
         if (Input.GetKeyDown(Inputs[0]))
         {
             print("Stored input '" +Inputs[0]+"' ");
-			inText.GetComponent<Text>().text += Inputs[0];
+			inText.GetComponent<TextMesh>().text += Inputs[0];
             inputList[indexSlot] = moveStates.LEFT;
             indexSlot += 1;
         }
         if (Input.GetKeyDown(Inputs[1]))
         {
             print("Stored input '" + Inputs[1] + "' ");
-			inText.GetComponent<Text>().text += Inputs[1];
+			inText.GetComponent<TextMesh>().text += Inputs[1];
             inputList[indexSlot] = moveStates.RIGHT;
             indexSlot += 1;
         }
         if (Input.GetKeyDown(Inputs[2]))
         {
             print("Stored input '" + Inputs[2] + "' ");
-			inText.GetComponent<Text>().text += Inputs[2];
+			inText.GetComponent<TextMesh>().text += Inputs[2];
             inputList[indexSlot] = moveStates.UP;
             indexSlot += 1;
         }
         if (Input.GetKeyDown(Inputs[3]))
         {
             print("Stored input '" + Inputs[3] + "' ");
-			inText.GetComponent<Text>().text += Inputs[3];
+			inText.GetComponent<TextMesh>().text += Inputs[3];
             inputList[indexSlot] = moveStates.DOWN;
             indexSlot += 1;
         }
         if (Input.GetKeyDown(Inputs[5]))
         {
             print("Stored input '" + Inputs[5] + "' ");
-			inText.GetComponent<Text>().text += Inputs[5];
+			inText.GetComponent<TextMesh>().text += Inputs[5];
             inputList[indexSlot] = moveStates.ROTATE_LEFT;
             indexSlot += 1;
         }
         if (Input.GetKeyDown(Inputs[6]))
         {
             print("Stored input '" + Inputs[6] + "' ");
-			inText.GetComponent<Text>().text += Inputs[6];
+			inText.GetComponent<TextMesh>().text += Inputs[6];
             inputList[indexSlot] = moveStates.ROTATE_RIGHT;
             indexSlot += 1;
         }
         if (Input.GetKeyDown(Inputs[7]))
         {
             print("Stored input '" + Inputs[7] + "' ");
-			inText.GetComponent<Text>().text += Inputs[7];
+			inText.GetComponent<TextMesh>().text += Inputs[7];
             inputList[indexSlot] = moveStates.SHOOT;
             indexSlot += 1;
         }
         if (indexSlot >= inputList.Length)
         {
-			inText.GetComponent<Text>().text = "";
+			inText.GetComponent<TextMesh>().text = "";
             indexSlot = 0;
 			Array.Clear(inputList, 0, inputList.Length);
         }
@@ -195,7 +194,7 @@ public class Player_Control_Test : MonoBehaviour {
         if (Input.GetKeyDown(Inputs[4]))
         {
 			submit = true;
-			print (inText.GetComponent<Text> ().text);
+			print (inText.GetComponent<TextMesh> ().text);
             
         }
         if (submit)
@@ -218,7 +217,7 @@ public class Player_Control_Test : MonoBehaviour {
                 currentAction = 0;
                 inputList = new moveStates[6];
                 submit = false;
-				inText.GetComponent<Text>().text = "";
+				inText.GetComponent<TextMesh>().text = "";
 				indexSlot = 0;
 				Array.Clear(inputList, 0, inputList.Length);
 

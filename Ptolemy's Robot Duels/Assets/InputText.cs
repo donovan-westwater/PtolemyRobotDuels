@@ -20,10 +20,11 @@ public class InputText : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-		
-		//Vector3 wantedPos = Camera.main.WorldToViewportPoint (this.transform.position);
-		//transform.position = new Vector3 (wantedPos.x * Screen.width + xDisp, wantedPos.y * Screen.height + yDisp, 40);
-		transform.position = new Vector2(xDisp,yDisp);
+		//Vector2 wantedPos = this.transform.position;
+		//Vector2 wantedPos = Camera.main.WorldToViewportPoint (this.transform.position);
+		transform.position = new Vector2(xDisp, yDisp);
+		//transform.position = new Vector2(xDisp,yDisp);
 
 			}
 }
+//REPLACE TEXT WITH TEXT MESH?
