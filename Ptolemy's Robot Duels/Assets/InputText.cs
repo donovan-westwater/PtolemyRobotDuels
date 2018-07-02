@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class InputText : MonoBehaviour {
 
 	// Use this for initialization //Seconds to read the text
-	public float xDisp = .05f;
-	public float yDisp = .05f;
+	//public float xDisp = .05f;
+	//public float yDisp = .05f;
 	public GameObject parentObject;
 
 	void Start()
@@ -22,7 +22,7 @@ public class InputText : MonoBehaviour {
 	void Update () {
 		//Vector2 wantedPos = this.transform.position;
 		//Vector2 wantedPos = Camera.main.WorldToViewportPoint (this.transform.position);
-		transform.position = new Vector2(xDisp, yDisp);
+		//transform.position = new Vector2(xDisp, yDisp);
 		//transform.position = new Vector2(xDisp,yDisp);
 
 			}

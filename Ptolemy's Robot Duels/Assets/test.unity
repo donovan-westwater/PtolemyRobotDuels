@@ -572,7 +572,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -24.7, y: 5.7}
+  m_AnchoredPosition: {x: 0, y: 2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &926191773
@@ -602,14 +602,12 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 926191770}
-  m_Text: 'Testing testing testing
-
-    testing teshing theisng '
+  m_Text: test
   m_OffsetZ: -8
-  m_CharacterSize: 5
+  m_CharacterSize: 1
   m_LineSpacing: 1
-  m_Anchor: 0
-  m_Alignment: 0
+  m_Anchor: 1
+  m_Alignment: 1
   m_TabSize: 4
   m_FontSize: 12
   m_FontStyle: 0
@@ -799,7 +797,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 6.8570075
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -821,7 +819,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1450321728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.69, y: -1.4, z: -1}
+  m_LocalPosition: {x: 1.69, y: -1.4, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -967,7 +965,7 @@ RectTransform:
   m_GameObject: {fileID: 1923810205}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3537426, y: 1.377048, z: 1}
+  m_LocalScale: {x: 1.3537426, y: 1.3770479, z: 1}
   m_Children:
   - {fileID: 648608226}
   - {fileID: 926191771}
@@ -1003,7 +1001,7 @@ Transform:
   m_GameObject: {fileID: 1980599898}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.5, y: -1.5, z: 0}
-  m_LocalScale: {x: 261.244, y: 145.10982, z: 1}
+  m_LocalScale: {x: 261.244, y: 145.10982, z: 0}
   m_Children: []
   m_Father: {fileID: 752611609}
   m_RootOrder: 0
@@ -1078,7 +1076,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1997814082}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7386929, y: 0.72619104, z: 1}
   m_Children: []
   m_Father: {fileID: 2083477552}
@@ -1086,7 +1084,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10.7, y: 7}
+  m_AnchoredPosition: {x: 0, y: 2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1997814085
@@ -1116,12 +1114,12 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1997814082}
-  m_Text: testtesttesttesttest
+  m_Text: test
   m_OffsetZ: -8
-  m_CharacterSize: 3
+  m_CharacterSize: 1
   m_LineSpacing: 1
-  m_Anchor: 0
-  m_Alignment: 0
+  m_Anchor: 1
+  m_Alignment: 1
   m_TabSize: 4
   m_FontSize: 12
   m_FontStyle: 0
