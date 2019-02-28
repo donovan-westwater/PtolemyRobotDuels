@@ -256,6 +256,7 @@ public class Player_Control_Test : MonoBehaviour {
     //Test in future to make sure it links to parent
     public void shootTest()
     {
+        //Change the z postion to show up (MUST BE BETWEEN -11 AND 0)
         print("I have fired?");
         bulletStor = Instantiate(bulletPrefab, transform.position, aim_sprite.transform.rotation);
         bulletStor.transform.position = Vector2.MoveTowards(bulletStor.transform.position, aim_sprite.transform.position,50);
